@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Blogs</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f9;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    h1 {
+      background: #4a90e2;
+      color: white;
+      padding: 30px;
+      margin: 0;
+      font-size: 52px;
+      font-weight: bold;
+    }
+
+    .button-container {
+      margin: 40px;
+    }
+
+    .main-btn {
+      background: #4a90e2;
+      color: white;
+      border: none;
+      padding: 20px 40px;
+      margin: 15px;
+      font-size: 22px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .main-btn:hover {
+      background: #357ab8;
+      transform: scale(1.05);
+    }
+
+    /* Modal styles using :target */
+    .modal {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+      display: none;
+    }
+
+    .modal:target {
+      display: block;
+      animation: fadeIn 0.4s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .modal-content {
+      background: #fff;
+      margin: 10% auto;
+      padding: 25px;
+      border: 2px solid #ddd;
+      border-radius: 10px;
+      width: 350px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+      text-align: center;
+      animation: slideDown 0.4s ease;
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .close {
+      color: #aaa;
+      font-size: 28px;
+      font-weight: bold;
+      text-decoration: none;
+      float: right;
+    }
+
+    .close:hover {
+      color: #000;
+    }
+
+    .box-btn {
+      background: #50c878;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      margin: 12px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .box-btn:hover {
+      background: #3da766;
+      transform: scale(1.05);
+    }
+
+    /* Blogging sites section */
+    h2 {
+      margin-top: 80px;
+      font-size: 36px;
+      color: #333;
+    }
+
+    .blog-sites {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      max-width: 900px;
+      margin: 30px auto;
+    }
+
+    .site-btn {
+      background: #ff7f50;
+      color: white;
+      padding: 18px;
+      font-size: 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .site-btn img {
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+    }
+
+    .site-btn:hover {
+      background: #e96a3d;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <h1>Blogs</h1>
+
+  <div class="button-container">
+    <a href="#modal1" class="main-btn">Personal Blog</a>
+    <a href="#modal2" class="main-btn">Business Blog</a>
+    <a href="#modal3" class="main-btn">Technology Blog</a>
+    <a href="#modal4" class="main-btn">Fashion Blog</a>
+    <a href="#modal5" class="main-btn">Education Blog</a>
+  </div>
+
+  <!-- Modals -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <a href="#" class="close">&times;</a>
+      <a href="#" class="box-btn">Link 1</a>
+      <a href="#" class="box-btn">Link 2</a>
+      <a href="#" class="box-btn">Link 3</a>
+    </div>
+  </div>
+
+  <div id="modal2" class="modal">
+    <div class="modal-content">
+      <a href="#" class="close">&times;</a>
+      <a href="#" class="box-btn">Link 1</a>
+      <a href="#" class="box-btn">Link 2</a>
+      <a href="#" class="box-btn">Link 3</a>
+    </div>
+  </div>
+
+  <div id="modal3" class="modal">
+    <div class="modal-content">
+      <a href="#" class="close">&times;</a>
+      <a href="#" class="box-btn">Link 1</a>
+      <a href="#" class="box-btn">Link 2</a>
+      <a href="#" class="box-btn">Link 3</a>
+    </div>
+  </div>
+
+  <div id="modal4" class="modal">
+    <div class="modal-content">
+      <a href="#" class="close">&times;</a>
+      <a href="#" class="box-btn">Link 1</a>
+      <a href="#" class="box-btn">Link 2</a>
+      <a href="#" class="box-btn">Link 3</a>
+    </div>
+  </div>
+
+  <div id="modal5" class="modal">
+    <div class="modal-content">
+      <a href="#" class="close">&times;</a>
+      <a href="#" class="box-btn">Link 1</a>
+      <a href="#" class="box-btn">Link 2</a>
+      <a href="#" class="box-btn">Link 3</a>
+    </div>
+  </div>
+
+  <!-- Blogging sites section with corrected logos -->
+  <h2>Blogging Sites</h2>
+  <div class="blog-sites">
+    <a href="https://www.squarespace.com/websites/create-a-blog" target="_blank" class="site-btn">
+      <img src="https://images.icon-icons.com/2407/PNG/512/squarespace_icon_146096.png" alt="Squarespace Logo"> Squarespace
+    </a>
+    <a href="https://medium.com/blog" target="_blank" class="site-btn">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Medium_logo_Monogram.svg" alt="Medium Logo"> Medium
+    </a>
+    <a href="https://www.facebook.com/community/whats-new/welcome-to-the-facebook-community-blog/" target="_blank" class="site-btn">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="Facebook Logo"> Facebook
+    </a>
+    <a href="https://blog.x.com/" target="_blank" class="site-btn">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/X-Logo-Round-Color.png" alt="X Logo"> X
+    </a>
+    <a href="https://about.instagram.com/blog/announcements" target="_blank" class="site-btn">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Logo"> Instagram
+    </a>
+    <a href="https://business.pinterest.com/blog/" target="_blank" class="site-btn">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Pinterest.svg/2048px-Pinterest.svg.png" alt="Pinterest Logo"> Pinterest
+    </a>
+  </div>
+</body>
+</html>
